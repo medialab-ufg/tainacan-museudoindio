@@ -75,7 +75,7 @@ class TainacanMuseuIndioThemeTerm {
 
     function tainacan_museuindio_term_to_html( $string_html, $term ) {
         $show_as_link = get_post_meta($this->get_id_by_db_identifier($term->get_taxonomy()), $this->show_term_as_link, true);
-        if($show_as_link == 0) {
+        if($show_as_link == 1) {
             $noTags = strip_tags($string_html);
             return $noTags;
         }
