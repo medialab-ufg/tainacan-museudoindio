@@ -1,12 +1,29 @@
+hr.mi-hr {
+  border-color: #AD3D30;
+  border-width: 8px;
+  width: 300px;
+  margin-left: 0; }
+  hr.mi-hr.title {
+    border-width: 4px;
+    width: 200px; }
+
 .page-header .ph-title-description .singular-title {
   max-height: 400px; }
-  .page-header .ph-title-description .singular-title hr {
-    border-color: #AD3D30;
-    border-width: 8px;
-    width: 288px;
-    margin-left: 0; }
   .page-header .ph-title-description .singular-title p {
-    white-space: pre-wrap;
-    margin-bottom: 0; }
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0;
+    white-space: pre-wrap; }
+
+.front-page .front-page-header h1 {
+  font-size: 24px;
+  font-weight: 600; }
+.front-page .front-page-body .figure img {
+  object-fit: none; }
+.front-page .front-page-body .figure .figure-caption {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600; }
 
 /*# sourceMappingURL=museudoindio.css.map */

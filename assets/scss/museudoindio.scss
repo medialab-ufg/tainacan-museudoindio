@@ -1,16 +1,48 @@
+hr.mi-hr {
+    border-color: #AD3D30;
+    border-width: 8px;
+    width: 300px;
+    margin-left: 0;
+    &.title {
+        border-width: 4px;
+        width: 200px;
+    }
+}
 .page-header {
     .ph-title-description {
         .singular-title {
             max-height: 400px;
-            hr {
-                border-color: #AD3D30;
-                border-width: 8px;
-                width: 288px;
-                margin-left: 0;
-            }
             p {
-                white-space: pre-wrap;
+                color: #000;
+                font: {
+                    size: 18px;
+                    weight: 400;
+                }
                 margin-bottom: 0;
+                white-space: pre-wrap;
+            }
+        }
+    }
+}
+
+.front-page {
+    .front-page-header {
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+    .front-page-body {
+        .figure {
+            img {
+                object-fit: none;
+            }
+            .figure-caption {
+                color: #000;
+                font: {
+                    size: 18px;
+                    weight: 600;
+                }
             }
         }
     }

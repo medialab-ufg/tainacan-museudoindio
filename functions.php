@@ -15,7 +15,7 @@ function museuindio_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'museuindio_enqueue_styles', 99 );
 
 function description_on_header_banner(){ ?>
-    <hr/>
+    <hr class="mi-hr"/>
     <p>Aqui teremos uma breve descrição do repositório em si, do que se trata, histórico,
 resumo, etc.</p>
 <?php }
