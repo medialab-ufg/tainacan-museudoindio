@@ -21,3 +21,14 @@ function description_on_header_banner(){ ?>
 resumo, etc.</p>
 <?php }
 add_action('tainacan-interface-banner-header-description', 'description_on_header_banner');
+
+/**
+ * Register the menu for use before the banner
+ */
+add_action( 'after_setup_theme', 'mi_top_menu' );
+function mi_top_menu() {
+	register_nav_menu( 'MenuBannerBefore', __( 'Nav Menu Before Header', 'tainacan-theme' ) );
+	
+	/* show_admin_bar( false ); */
+	
+}

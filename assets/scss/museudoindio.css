@@ -6,6 +6,15 @@ hr.mi-hr {
   hr.mi-hr.title {
     border-width: 4px;
     width: 200px; }
+  @media only screen and (max-width: 576px) {
+    hr.mi-hr {
+      width: 280px; } }
+
+#menubannerbefore ul li a {
+  color: #AD3D30;
+  font-weight: 600; }
+  #menubannerbefore ul li a:hover {
+    text-decoration: none; }
 
 .page-header .ph-title-description .singular-title {
   max-height: 400px; }
@@ -15,6 +24,9 @@ hr.mi-hr {
     font-weight: 400;
     margin-bottom: 0;
     white-space: pre-wrap; }
+@media only screen and (max-width: 576px) {
+  .page-header.page-height {
+    height: 300px; } }
 
 .front-page .front-page-header h1 {
   font-size: 24px;
@@ -69,5 +81,84 @@ hr.mi-hr {
   cursor: pointer; }
   .front-page .front-page-body #more i {
     padding: 0.2rem; }
+
+/* BOX DE PESQUISA */
+.search-box {
+  width: 53px;
+  height: 53px;
+  position: absolute;
+  top: 45px;
+  right: 58px;
+  overflow: hidden;
+  border-radius: 27px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+  transition: width 400ms ease-in-out; }
+  .search-box.active {
+    width: 353px; }
+  .search-box legend {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0; }
+  .search-box input[type=text] {
+    width: 300px;
+    height: 53px;
+    padding: 0 20px;
+    line-height: 53px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    border-radius: 27px 0 0 27px;
+    background: none; }
+  .search-box button[type=submit] {
+    width: 53px;
+    height: 53px;
+    margin: 0;
+    padding: 0;
+    font-size: 34px;
+    color: #000;
+    text-align: center;
+    line-height: 53px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    border: none;
+    background: none; }
+    .search-box button[type=submit] i.mdi {
+      border-radius: 50%; }
+    .search-box button[type=submit]:focus {
+      outline: none; }
+
+/* BOX DE COMPARTILHAMENTO */
+.collection-header--type-b {
+  width: 53px;
+  height: 53px;
+  line-height: 53px;
+  top: 118px;
+  right: 58px;
+  left: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  transform: translateX(0) translateY(0); }
+  .collection-header--type-b .btn {
+    background-color: rgba(255, 255, 255, 0.8); }
+    .collection-header--type-b .btn .mdi {
+      height: 41px;
+      font-size: 34px;
+      line-height: 41px;
+      border-radius: 50%; }
+    .collection-header--type-b .btn.active .rotater:nth-child(1) .btn-icon {
+      transform: translateX(-5em) rotate(22.5deg); }
+    .collection-header--type-b .btn.active .rotater:nth-child(2) .btn-icon {
+      transform: translateX(-5em) rotate(-22.5deg); }
 
 /*# sourceMappingURL=museudoindio.css.map */

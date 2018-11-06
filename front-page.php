@@ -2,8 +2,6 @@
 
 <!-- Get the banner to display -->
 <?php get_template_part( 'template-parts/bannerheader' ); ?>
-<!-- Get the menu if is create in panel admin -->
-<?php get_template_part( 'template-parts/menubellowbanner' ); ?>
 
 <section class="front-page margin-two-column mt-5">
     <div class="front-page-header margin-one-column">

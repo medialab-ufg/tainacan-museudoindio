@@ -1,22 +1,68 @@
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
 
-    var list = jQuery(".front-page-list li");
+  var list = $(".front-page-list li");
+  if($(window).width() <= 576) {
+    var numToShow = 25;
+  }else {
     var numToShow = 75;
-    var button = jQuery("#more");
-    var numInList = list.length;
-    list.hide();
-    if (numInList > numToShow) {
-      button.show();
-    }
-    list.slice(0, numToShow).show();
+  }
+  var button = $("#more");
+  var numInList = list.length;
+  list.hide();
+  if (numInList > numToShow) {
+    button.show();
+  }
+  list.slice(0, numToShow).show();
 
-    button.click(function(){
-        var showing = list.filter(':visible').length;
-        list.slice(showing - 1, showing + numToShow).fadeIn();
-        var nowShowing = list.filter(':visible').length;
-        if (nowShowing >= numInList) {
-          button.hide();
-        }
-    });
+  button.click(function(){
+      var showing = list.filter(':visible').length;
+      list.slice(showing - 1, showing + numToShow).fadeIn();
+      var nowShowing = list.filter(':visible').length;
+      if (nowShowing >= numInList) {
+        button.hide();
+      }
+  });
+
+  base.searchBox.manipular();
+  
+  $('#mi-search').submit(function(e) {
+		e.preventDefault();
+		var val = $('#search-box__search').val();
+		if (val) {
+			window.location.href = mhn.search_target_url + '?search=' + val;
+		}
+		return;
+	});
 
 });
+
+var base = {
+  searchBox: {
+		manipular: function() {
+			var _form = jQuery('.search-box');
+
+			_form
+				.find('button[type=submit]')
+				.on('click',function() {
+					// Se o form está fechado, o clique abre o formulário
+					if (!_form.hasClass('active')) {
+						_form.addClass('active');
+
+						return false;
+					} else {
+						// Se o campo estiver vazio, o clique no botão fecha o form novamente
+						var campo = _form.find('input[type=text]').val();
+						if (campo == '') {
+							_form.removeClass('active');
+
+							return false;
+						}
+					}
+			});
+
+			jQuery('#search-box__search').on('focus',function() {
+				_form.addClass('active');
+			});
+		}
+	}
+}
