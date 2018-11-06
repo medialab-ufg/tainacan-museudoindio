@@ -35,7 +35,7 @@ hr.mi-hr {
     .front-page-body {
         .figure {
             img {
-                object-fit: none;
+                //object-fit: none;
             }
             .figure-caption {
                 color: #000;
@@ -43,6 +43,61 @@ hr.mi-hr {
                     size: 18px;
                     weight: 600;
                 }
+            }
+        }
+        .front-page-list {
+            text-align: center;
+            li {
+                list-style: none;
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                a {
+                    font: {
+                        size: 16px;
+                        weight: 400;
+                    }
+                    line-height: 28px;
+                    color: #000;
+                    &:hover {
+                        color: #AD3D30;
+                        text-decoration: none;
+                    }
+                }
+                &:last-child {
+                    -webkit-column-break-inside: auto;
+                    page-break-inside: auto;
+                    break-inside: auto;
+                }
+            }
+            @media only screen and (min-width: 768px){
+                -moz-column-count: 3;
+                -moz-column-gap: 0;
+                -moz-column-rule: none;
+                -webkit-column-count: 3;
+                -webkit-column-gap: 0;
+                -webkit-column-rule: none;
+                column-count: 3;
+                column-gap: 4rem;;
+                column-rule: none;
+            }
+            @media only screen and (min-width: 1408px){
+                -moz-column-count: 4;
+                -moz-column-gap: 7rem;
+                -moz-column-rule: none;
+                -webkit-column-count: 4;
+                -webkit-column-gap: 7rem;
+                -webkit-column-rule: none;
+                column-count: 4;
+                column-gap: 7rem;
+                column-rule: none;
+            }
+        }
+        #more {
+            background-color: #AD3D30;
+            cursor: pointer;
+            i {
+                padding: 0.2rem;
             }
         }
     }

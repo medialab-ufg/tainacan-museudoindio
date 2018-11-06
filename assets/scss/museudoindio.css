@@ -19,11 +19,55 @@ hr.mi-hr {
 .front-page .front-page-header h1 {
   font-size: 24px;
   font-weight: 600; }
-.front-page .front-page-body .figure img {
-  object-fit: none; }
 .front-page .front-page-body .figure .figure-caption {
   color: #000;
   font-size: 18px;
   font-weight: 600; }
+.front-page .front-page-body .front-page-list {
+  text-align: center; }
+  .front-page .front-page-body .front-page-list li {
+    list-style: none;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid; }
+    .front-page .front-page-body .front-page-list li a {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      color: #000; }
+      .front-page .front-page-body .front-page-list li a:hover {
+        color: #AD3D30;
+        text-decoration: none; }
+    .front-page .front-page-body .front-page-list li:last-child {
+      -webkit-column-break-inside: auto;
+      page-break-inside: auto;
+      break-inside: auto; }
+  @media only screen and (min-width: 768px) {
+    .front-page .front-page-body .front-page-list {
+      -moz-column-count: 3;
+      -moz-column-gap: 0;
+      -moz-column-rule: none;
+      -webkit-column-count: 3;
+      -webkit-column-gap: 0;
+      -webkit-column-rule: none;
+      column-count: 3;
+      column-gap: 4rem;
+      column-rule: none; } }
+  @media only screen and (min-width: 1408px) {
+    .front-page .front-page-body .front-page-list {
+      -moz-column-count: 4;
+      -moz-column-gap: 7rem;
+      -moz-column-rule: none;
+      -webkit-column-count: 4;
+      -webkit-column-gap: 7rem;
+      -webkit-column-rule: none;
+      column-count: 4;
+      column-gap: 7rem;
+      column-rule: none; } }
+.front-page .front-page-body #more {
+  background-color: #AD3D30;
+  cursor: pointer; }
+  .front-page .front-page-body #more i {
+    padding: 0.2rem; }
 
 /*# sourceMappingURL=museudoindio.css.map */
