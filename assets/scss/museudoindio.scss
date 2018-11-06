@@ -52,6 +52,13 @@ hr.mi-hr {
             font-size: 24px;
             font-weight: 600;
         }
+        p {
+            color: #808081;
+            font: {
+                size: 18px;
+                style: italic;
+            }
+        }
     }
     .front-page-body {
         .figure {
@@ -209,5 +216,11 @@ hr.mi-hr {
                 .btn-icon { transform: translateX(-5em) rotate(-22.5deg); }
             }
         }
+    }
+}
+
+footer {
+    &.tainacan-footer {
+        background-color: #AD3D30;
     }
 }

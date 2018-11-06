@@ -31,6 +31,10 @@ hr.mi-hr {
 .front-page .front-page-header h1 {
   font-size: 24px;
   font-weight: 600; }
+.front-page .front-page-header p {
+  color: #808081;
+  font-size: 18px;
+  font-style: italic; }
 .front-page .front-page-body .figure .figure-caption {
   color: #000;
   font-size: 18px;
@@ -160,5 +164,8 @@ hr.mi-hr {
       transform: translateX(-5em) rotate(22.5deg); }
     .collection-header--type-b .btn.active .rotater:nth-child(2) .btn-icon {
       transform: translateX(-5em) rotate(-22.5deg); }
+
+footer.tainacan-footer {
+  background-color: #AD3D30; }
 
 /*# sourceMappingURL=museudoindio.css.map */

@@ -39,7 +39,7 @@
                     <li><a href="#">Etnia (<?php echo $x; ?>)</a></li>
                 <?php } ?>
             </div>
-            <a id="more" class="mt-3"><i class="mdi mdi-chevron-down text-white"></i></a>
+            <a id="more" class="my-5" title="<?php _e('Display More', 'tainacan-interface'); ?>"><i class="mdi mdi-chevron-down text-white"></i></a>
         </div>
     </div>
 

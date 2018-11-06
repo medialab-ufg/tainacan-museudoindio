@@ -32,3 +32,15 @@ function mi_top_menu() {
 	/* show_admin_bar( false ); */
 	
 }
+
+/**
+ * Adiciona classes extras à lista de elementos que mudam de cor de acordo com a preferência do usuário
+ * 
+ */
+function add_class_customize($colors) {
+
+    $class = '.front-page .front-page-header h1 { color: '.$colors["tainacan_link_color"].'; }';
+
+	return $class;
+}
+add_filter('tainacan-customize-css-class', 'add_class_customize');
