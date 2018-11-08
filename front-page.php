@@ -20,7 +20,11 @@
 							<img src="<?php echo wp_get_attachment_url($image_id); ?>" class="figure-img" width="320" height="320">
 						<?php endif; ?>
 						
-                        <figcaption class="figure-caption"><?php echo $cat->_toHtml(); ?></figcaption>
+                        <figcaption class="figure-caption">
+							<a href="<?php echo $MuseuDoIndioMods->get_term_link($cat); ?>">
+								<?php echo $cat->get_name(); ?>
+							</a>
+						</figcaption>
                     </figure>
                 </div>
             <?php endforeach; ?>
