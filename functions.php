@@ -1,6 +1,7 @@
 <?php
 
 require_once ('functions/class-tainacanmuseuIndiothemeterm.php');
+require_once ('tainacan-mods.php');
 
 // Estilos
 function museuindio_enqueue_styles() {
@@ -74,8 +75,13 @@ function tainacan_mhn_get_nomes_povos() {
 }
 
 
+
+
 // check tainacan 
 add_action('init', function() {
+	
+	remove_filter('theme_mod_header_image', [\Tainacan\Theme_Helper::get_instance(), 'header_image']);
+	
 	if ( !function_exists('tainacan_the_document') ) {
 		die('Plugin do Tainacan não encontrado');
 	}
