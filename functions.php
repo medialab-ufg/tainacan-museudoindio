@@ -44,3 +44,40 @@ function add_class_customize($colors) {
 	return $class;
 }
 add_filter('tainacan-customize-css-class', 'add_class_customize');
+
+function tainacan_mhn_get_home_categories() {
+	
+	$terms_repo = \Tainacan\Repositories\Terms::get_instance();
+	$tax_repo = \Tainacan\Repositories\Taxonomies::get_instance();
+	$tax = $tax_repo->fetch_one(['name' => 'Categoria']);
+	if (false !== $tax) {
+		$terms = $terms_repo->fetch([], $tax);
+		return $terms;
+	}
+	return [];
+	
+	
+}
+
+function tainacan_mhn_get_nomes_povos() {
+	
+	$terms_repo = \Tainacan\Repositories\Terms::get_instance();
+	$tax_repo = \Tainacan\Repositories\Taxonomies::get_instance();
+	$tax = $tax_repo->fetch_one(['name' => 'Nome Principal do povo']);
+	if (false !== $tax) {
+		$terms = $terms_repo->fetch([], $tax);
+		return $terms;
+	}
+	return [];
+	
+	
+}
+
+
+// check tainacan 
+add_action('init', function() {
+	if ( !function_exists('tainacan_the_document') ) {
+		die('Plugin do Tainacan não encontrado');
+	}
+});
+

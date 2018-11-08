@@ -9,17 +9,21 @@
         <p>Subtítulo, se necessário for.</p>
         <hr class="mi-hr title"/>
     </div>
-
+	<?php $categorias = tainacan_mhn_get_home_categories(); ?>
     <div class="front-page-body">
         <div class="row">
-            <?php for($x = 0; $x<=9; $x++) { ?>
-                <div class="col p-0 mt-5">
+            <?php foreach ($categorias as $cat):  ?>
+                <?php $image_id = $cat->get_header_image_id(); ?>
+				<div class="col p-0 mt-5">
                     <figure class="figure">
-                        <img src="https://cdn.pixabay.com/photo/2017/04/25/06/15/father-and-son-2258681_960_720.jpg" class="figure-img" width="320" height="320">
-                        <figcaption class="figure-caption">Título</figcaption>
+                        <?php if ($image_id): ?>
+							<img src="<?php echo wp_get_attachment_url($image_id); ?>" class="figure-img" width="320" height="320">
+						<?php endif; ?>
+						
+                        <figcaption class="figure-caption"><?php echo $cat->_toHtml(); ?></figcaption>
                     </figure>
                 </div>
-            <?php } ?>
+            <?php endforeach; ?>
         </div>
     </div>
 
@@ -35,9 +39,10 @@
     <div class="front-page-body">
         <div class="row justify-content-center">
             <div class="front-page-list w-100 mt-5">
-                <?php for($x = 0; $x<=99; $x++) { ?>
-                    <li><a href="#">Etnia (<?php echo $x; ?>)</a></li>
-                <?php } ?>
+                <?php $povos = 	tainacan_mhn_get_nomes_povos(); ?>
+				<?php foreach ($povos as $povo):  ?>
+                    <li><?php echo $povo->_toHtml(); ?></li>
+                <?php endforeach; ?>
             </div>
             <a id="more" class="my-5" title="<?php _e('Display More', 'tainacan-interface'); ?>"><i class="mdi mdi-chevron-down text-white"></i></a>
         </div>
