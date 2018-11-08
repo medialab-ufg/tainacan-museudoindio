@@ -17,7 +17,7 @@
 				<div class="col p-0 mt-5">
                     <figure class="figure">
                         <?php if ($image_id): ?>
-							<img src="<?php echo wp_get_attachment_url($image_id); ?>" class="figure-img" width="320" height="320">
+							<img src="<?php echo wp_get_attachment_url($image_id, 'thumbnail'); ?>" class="figure-img" width="320" height="320">
 						<?php endif; ?>
 						
                         <figcaption class="figure-caption"><?php echo $cat->_toHtml(); ?></figcaption>
