@@ -7,6 +7,8 @@ Class MuseuDoIndioMods {
 		
 		add_action('init', [$this, 'init']);
 		
+		//add_filter('term_link', [$this, 'term_link_filter'], 10, 3);
+		
 		
 	}
 	
@@ -68,6 +70,17 @@ Class MuseuDoIndioMods {
 		
 		return trailingslashit($base_link) . '#/?' . $link; 
 		
+	}
+	
+	function term_link_filter($link, $term, $taxonomy) {
+		$theme_helper = \Tainacan\Theme_Helper::get_instance();
+		if ( $theme_helper->is_taxonomy_a_tainacan_tax($taxonomy) ) {
+			$termEntity = new \Tainacan\Entities\Term($term);
+			if ( $termEntity instanceof \Tainacan\Entities\Term ) {
+				return $this->get_term_link($termEntity);
+			}
+		}
+		return $link;
 	}
 	
 	
