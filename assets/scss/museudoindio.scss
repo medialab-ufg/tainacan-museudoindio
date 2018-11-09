@@ -67,15 +67,17 @@ hr.mi-hr {
         }
         .figure {
             .figure-caption {
-                color: #000;
-                font: {
-                    size: 18px;
-                    weight: 600;
+                a {
+                    color: #000;
+                    font: {
+                        size: 18px;
+                        weight: 600;
+                    }
                 }
             }
         }
         .front-page-list {
-            text-align: center;
+            text-align: left;
             li {
                 list-style: none;
                 -webkit-column-break-inside: avoid;

@@ -41,7 +41,7 @@
     </div>
 
     <div class="front-page-body">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center margin-two-column">
             <div class="front-page-list w-100 mt-5">
                 <?php $povos = 	tainacan_mi_get_nomes_povos(); ?>
 				<?php foreach ($povos as $povo):  ?>

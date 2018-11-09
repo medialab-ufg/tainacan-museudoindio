@@ -38,12 +38,12 @@ hr.mi-hr {
 .front-page .front-page-body .col {
   max-width: 320px;
   margin-right: 2.5rem; }
-.front-page .front-page-body .figure .figure-caption {
+.front-page .front-page-body .figure .figure-caption a {
   color: #000;
   font-size: 18px;
   font-weight: 600; }
 .front-page .front-page-body .front-page-list {
-  text-align: center; }
+  text-align: left; }
   .front-page .front-page-body .front-page-list li {
     list-style: none;
     -webkit-column-break-inside: avoid;
