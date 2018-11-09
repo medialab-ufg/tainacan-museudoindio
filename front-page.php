@@ -9,7 +9,7 @@
         <p>Subtítulo, se necessário for.</p>
         <hr class="mi-hr title"/>
     </div>
-	<?php $categorias = tainacan_mhn_get_home_categories(); ?>
+	<?php $categorias = tainacan_mi_get_home_categories(); ?>
     <div class="front-page-body">
         <div class="row">
             <?php foreach ($categorias as $cat):  ?>
@@ -43,7 +43,7 @@
     <div class="front-page-body">
         <div class="row justify-content-center">
             <div class="front-page-list w-100 mt-5">
-                <?php $povos = 	tainacan_mhn_get_nomes_povos(); ?>
+                <?php $povos = 	tainacan_mi_get_nomes_povos(); ?>
 				<?php foreach ($povos as $povo):  ?>
                     <li><?php echo $povo->_toHtml(); ?></li>
                 <?php endforeach; ?>

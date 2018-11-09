@@ -45,7 +45,7 @@ function add_class_customize($colors) {
 }
 add_filter('tainacan-customize-css-class', 'add_class_customize');
 
-function tainacan_mhn_get_home_categories() {
+function tainacan_mi_get_home_categories() {
 	
 	$terms_repo = \Tainacan\Repositories\Terms::get_instance();
 	$tax_repo = \Tainacan\Repositories\Taxonomies::get_instance();
@@ -59,7 +59,7 @@ function tainacan_mhn_get_home_categories() {
 	
 }
 
-function tainacan_mhn_get_nomes_povos() {
+function tainacan_mi_get_nomes_povos() {
 	
 	$terms_repo = \Tainacan\Repositories\Terms::get_instance();
 	$tax_repo = \Tainacan\Repositories\Taxonomies::get_instance();
