@@ -55,7 +55,6 @@ hr.mi-hr {
       line-height: 28px;
       color: #000; }
       .front-page .front-page-body .front-page-list li a:hover {
-        color: #AD3D30;
         text-decoration: none; }
     .front-page .front-page-body .front-page-list li:last-child {
       -webkit-column-break-inside: auto;
