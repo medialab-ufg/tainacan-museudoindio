@@ -38,7 +38,7 @@ hr.mi-hr {
 .front-page .front-page-body .col {
   max-width: 320px;
   margin-right: 2.5rem; }
-.front-page .front-page-body .figure .figure-caption a {
+.front-page .front-page-body .figure .figure-caption {
   color: #000;
   font-size: 18px;
   font-weight: 600; }
