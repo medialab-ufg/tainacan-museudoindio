@@ -15,17 +15,17 @@
             <?php foreach ($categorias as $cat):  ?>
                 <?php $image_id = $cat->get_header_image_id(); ?>
 				<div class="col p-0 mt-5">
-                    <figure class="figure">
-                        <?php if ($image_id): ?>
-							<img src="<?php echo wp_get_attachment_url($image_id); ?>" class="figure-img" width="320" height="320">
-						<?php endif; ?>
-						
-                        <figcaption class="figure-caption">
-							<a href="<?php echo $MuseuDoIndioMods->get_term_link($cat); ?>">
-								<?php echo $cat->get_name(); ?>
-							</a>
-						</figcaption>
-                    </figure>
+                    <a href="<?php echo $MuseuDoIndioMods->get_term_link($cat); ?>">
+                        <figure class="figure">
+                            <?php if ($image_id): ?>
+                                <img src="<?php echo wp_get_attachment_url($image_id); ?>" class="figure-img" width="320" height="320">
+                            <?php endif; ?>
+                            
+                            <figcaption class="figure-caption">
+                                <?php echo $cat->get_name(); ?>
+                            </figcaption>
+                        </figure>
+                    </a>
                 </div>
             <?php endforeach; ?>
         </div>
