@@ -103,6 +103,9 @@ hr.mi-hr {
   transition: width 400ms ease-in-out; }
   .search-box.active {
     width: 353px; }
+    @media only screen and (max-width: 576px) {
+      .search-box.active {
+        width: 260px; } }
   .search-box legend {
     position: absolute;
     width: 1px;
@@ -143,6 +146,19 @@ hr.mi-hr {
       border-radius: 50%; }
     .search-box button[type=submit]:focus {
       outline: none; }
+  @media only screen and (max-width: 576px) {
+    .search-box {
+      height: 30px;
+      right: 20px;
+      width: 30px; }
+      .search-box button[type=submit] {
+        width: 30px;
+        height: 30px;
+        font-size: 19px;
+        line-height: 30px; }
+      .search-box input[type=text] {
+        height: 30px;
+        line-height: 30px; } }
 
 /* BOX DE COMPARTILHAMENTO */
 .collection-header--type-b {
@@ -166,8 +182,23 @@ hr.mi-hr {
       transform: translateX(-5em) rotate(22.5deg); }
     .collection-header--type-b .btn.active .rotater:nth-child(2) .btn-icon {
       transform: translateX(-5em) rotate(-22.5deg); }
+  @media only screen and (max-width: 576px) {
+    .collection-header--type-b {
+      width: 30px;
+      height: 30px;
+      right: 20px;
+      top: 100px; }
+      .collection-header--type-b .btn .mdi {
+        font-size: 19px; } }
 
 footer.tainacan-footer {
   background-color: #AD3D30; }
+
+@media only screen and (min-width: 2000px) {
+  .max-large {
+    max-width: 1550px; } }
+@media only screen and (min-width: 2300px) {
+  .max-large {
+    max-width: 1945px; } }
 
 /*# sourceMappingURL=museudoindio.css.map */

@@ -1,6 +1,6 @@
 <?php if(has_nav_menu('MenuBannerBefore')) : ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
-        <div class="container">
+        <div class="container-fluid max-large px-0 margin-one-column">
             <?php echo tainacan_get_logo(); ?> 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

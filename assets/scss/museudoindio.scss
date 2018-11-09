@@ -147,7 +147,12 @@ hr.mi-hr {
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 	z-index: 2;
     transition: width 400ms ease-in-out;
-    &.active { width: 353px; }
+    &.active { 
+        width: 353px; 
+        @media only screen and (max-width: 576px) {
+            width: 260px;
+        }
+    }
     legend {
         position: absolute;
         width: 1px;
@@ -191,6 +196,21 @@ hr.mi-hr {
         }
         &:focus { outline: none; }
     }
+    @media only screen and (max-width: 576px){
+        height: 30px;
+        right: 20px;
+        width: 30px;
+        button[type=submit] {
+            width: 30px;
+            height: 30px;
+            font-size: 19px;
+            line-height: 30px;
+        }
+        input[type=text] {
+            height: 30px;
+            line-height: 30px;
+        }
+    }
 }
 
 /* BOX DE COMPARTILHAMENTO */
@@ -222,10 +242,31 @@ hr.mi-hr {
             }
         }
     }
+    @media only screen and (max-width: 576px) {
+        width: 30px;
+        height: 30px;
+        right: 20px;
+        top: 100px;
+        .btn {
+            .mdi {
+                font-size: 19px;
+            }
+        }
+    }
 }
 
 footer {
     &.tainacan-footer {
         background-color: #AD3D30;
+    }
+}
+
+.max-large {
+    @media only screen and (min-width: 2000px) {
+        max-width: 1550px;
+    }
+
+    @media only screen and (min-width: 2300px) {
+        max-width: 1945px;
     }
 }
