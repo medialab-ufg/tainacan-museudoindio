@@ -61,6 +61,10 @@ hr.mi-hr {
         }
     }
     .front-page-body {
+        .col {
+            max-width: 320px;
+            margin-right: 2.5rem;
+        }
         .figure {
             .figure-caption {
                 color: #000;
