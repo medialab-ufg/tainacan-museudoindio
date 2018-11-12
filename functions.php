@@ -38,10 +38,10 @@ function mi_top_menu() {
  * 
  */
 function add_class_customize($colors) {
-
-    $class = '.front-page .front-page-header h1 { color: '.$colors["tainacan_link_color"].'; }';
-	$class .= '.front-page .front-page-list li a:hover { color: '.$colors["tainacan_link_color"].'; }';
-	return $class;
+	return <<<CSS
+	.front-page .front-page-header h1 { color: {$colors['tainacan_link_color']}; }
+	.front-page .front-page-list li a:hover { color: {$colors['tainacan_link_color']}; }
+CSS;
 }
 add_filter('tainacan-customize-css-class', 'add_class_customize');
 
