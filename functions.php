@@ -60,15 +60,9 @@ function tainacan_mi_get_home_categories() {
 }
 
 function tainacan_mi_get_nomes_povos() {
+	global $MuseuDoIndioMods;
 	
-	$terms_repo = \Tainacan\Repositories\Terms::get_instance();
-	$tax_repo = \Tainacan\Repositories\Taxonomies::get_instance();
-	$tax = $tax_repo->fetch_one(['name' => 'Nome Principal do povo']);
-	if (false !== $tax) {
-		$terms = $terms_repo->fetch([], $tax);
-		return $terms;
-	}
-	return [];
+	return $MuseuDoIndioMods->get_nomes_povos_home();
 	
 	
 }

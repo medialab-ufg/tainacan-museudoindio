@@ -64,11 +64,13 @@ Class MuseuDoIndioMods {
 	
 	function get_term_link(\Tainacan\Entities\Term $term) {
 		
-		$link = "fetch_only%5B0%5D=thumbnail&fetch_only%5B1%5D=creation_date&fetch_only%5B2%5D=author_name&fetch_only%5B3%5D=title&fetch_only%5B4%5D=description&&fetch_only%5Bmeta%5D%5B0%5D=0&view_mode=masonry&perpage=48&paged=1&order=DESC&orderby=date&taxquery%5B0%5D%5Btaxonomy%5D=".$term->get_taxonomy()."&taxquery%5B0%5D%5Bterms%5D%5B0%5D=". $term->get_id() ."&taxquery%5B0%5D%5Bcompare%5D=IN";
+		return get_term_link($term->get_id(), $term->get_taxonomy());
 		
-		$base_link = get_post_type_archive_link($this->main_collection->get_db_identifier());
-		
-		return trailingslashit($base_link) . '#/?' . $link; 
+		// $link = "fetch_only%5B0%5D=thumbnail&fetch_only%5B1%5D=creation_date&fetch_only%5B2%5D=author_name&fetch_only%5B3%5D=title&fetch_only%5B4%5D=description&&fetch_only%5Bmeta%5D%5B0%5D=0&view_mode=masonry&perpage=48&paged=1&order=DESC&orderby=date&taxquery%5B0%5D%5Btaxonomy%5D=".$term->get_taxonomy()."&taxquery%5B0%5D%5Bterms%5D%5B0%5D=". $term->get_id() ."&taxquery%5B0%5D%5Bcompare%5D=IN";
+		// 
+		// $base_link = get_post_type_archive_link($this->main_collection->get_db_identifier());
+		// 
+		// return trailingslashit($base_link) . '#/?' . $link; 
 		
 	}
 	
@@ -81,6 +83,43 @@ Class MuseuDoIndioMods {
 			}
 		}
 		return $link;
+	}
+	
+	function get_nomes_povos_home() {
+		$meta_repo = \Tainacan\Repositories\Metadata::get_instance();
+		
+		$metas = $meta_repo->fetch_by_collection( $this->main_collection, ['name' => 'Nome Principal do povo'], 'OBJECT' );
+		//var_dump($metas);
+		if (is_array($metas) && sizeof($metas) > 0) {
+			$meta = $metas[0];
+			
+			$args = [
+				'collection_id' => $this->main_collection->get_id(),
+				'count_items' => true,
+				'items_filter' => false
+			];
+			
+			$nomes = $meta_repo->fetch_all_metadatum_values($meta->get_id(), $args);
+			
+			if (isset($nomes['values'])) {
+				foreach ($nomes['values'] as $value) {
+					
+					?>
+					<li>
+						<a href="<?php echo get_term_link( (int) $value['value'], $value['taxonomy'] ); ?>">
+							<?php echo $value['label']; ?>
+							(<?php echo $value['total_items']; ?>)
+						</a>
+					</li>
+					<?php
+					
+				}
+			}
+			
+			return $nomes;
+			
+		}
+		
 	}
 	
 	

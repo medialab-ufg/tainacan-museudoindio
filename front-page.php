@@ -43,10 +43,7 @@
     <div class="front-page-body">
         <div class="row justify-content-center margin-two-column">
             <div class="front-page-list w-100 mt-5">
-                <?php $povos = 	tainacan_mi_get_nomes_povos(); ?>
-				<?php foreach ($povos as $povo):  ?>
-                    <li><?php echo $povo->_toHtml(); ?></li>
-                <?php endforeach; ?>
+                <?php tainacan_mi_get_nomes_povos(); ?>
             </div>
             <a id="more" class="my-5" title="<?php _e('Display More', 'tainacan-interface'); ?>"><i class="mdi mdi-chevron-down text-white"></i></a>
         </div>
