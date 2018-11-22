@@ -4,9 +4,23 @@
 <?php get_template_part( 'template-parts/bannerheader' ); ?>
 
 <section class="front-page margin-two-column mt-5">
-    <div class="front-page-header margin-one-column">
+    
+	<div class="front-page-header margin-one-column">
+        <h1>Acervo Museológico</h1>
+        <!-- <p>Subtítulo, se necessário for.</p> -->
+        <hr class="mi-hr title"/>
+		<p class="text-justify">
+			<?php the_post(); the_content(); ?>
+		</p>
+    </div>
+	
+</section>
+
+<section class="front-page margin-two-column mt-5">	
+	
+	<div class="front-page-header margin-one-column">
         <h1>Coleções em destaque</h1>
-        <p>Subtítulo, se necessário for.</p>
+        <!-- <p>Subtítulo, se necessário for.</p> -->
         <hr class="mi-hr title"/>
     </div>
 	<?php $categorias = tainacan_mi_get_home_categories(); ?>
@@ -35,8 +49,8 @@
 
 <section class="front-page margin-two-column mt-5">
     <div class="front-page-header margin-one-column">
-        <h1>Povo indígena</h1>
-        <p>Lorem ipsum sit amet, consectetuer adipiscing elit.</p>
+        <h1>Por povo indígena</h1>
+        <p class="italic">Navegue no acervo vendo as peças de cada um dos povos indígenas abaixo</p>
         <hr class="mi-hr title"/>
     </div>
 

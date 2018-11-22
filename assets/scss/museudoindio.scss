@@ -56,7 +56,11 @@ hr.mi-hr {
             color: #808081;
             font: {
                 size: 18px;
-                style: italic;
+                text-align: justify;
+				text-justify: inter-word;
+				.italic {
+					style: italic;
+				}
             }
         }
     }

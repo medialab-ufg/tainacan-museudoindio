@@ -34,6 +34,9 @@ hr.mi-hr {
 .front-page .front-page-header p {
   color: #808081;
   font-size: 18px;
+  text-align: justify;
+  text-justify: inter-word; }
+.front-page .front-page-header p.italic {
   font-style: italic; }
 .front-page .front-page-body .col {
   max-width: 320px;
