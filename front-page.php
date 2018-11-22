@@ -51,4 +51,6 @@
 
 </section>
 
+<!-- teste -->
+
 <?php get_footer(); ?>
