@@ -1,5 +1,20 @@
 <?php
 
+// Variáveis globais do Tema 
+// Sobreescreva elas no seu ambiente de desenvolvimento
+// copiando o dev-vars-sample.php e salvando como dev-vars.php
+
+global $mindio_nome_colecao, $mindio_nome_tax_categoria, $mindio_nome_tax_povos;
+$mindio_nome_colecao = 'Museu do Índio';
+$mindio_nome_tax_categoria = 'Categoria';
+$mindio_nome_tax_povos = 'Nome Principal do povo';
+
+if (file_exists(get_stylesheet_directory() . '/dev-vars.php')) {
+	require_once('dev-vars.php');
+}
+
+
+
 require_once ('functions/class-tainacanmuseuIndiothemeterm.php');
 require_once ('tainacan-mods.php');
 
@@ -46,10 +61,10 @@ CSS;
 add_filter('tainacan-customize-css-class', 'add_class_customize');
 
 function tainacan_mi_get_home_categories() {
-	
+	global $mindio_nome_tax_categoria;
 	$terms_repo = \Tainacan\Repositories\Terms::get_instance();
 	$tax_repo = \Tainacan\Repositories\Taxonomies::get_instance();
-	$tax = $tax_repo->fetch_one(['name' => 'Categoria']);
+	$tax = $tax_repo->fetch_one(['name' => $mindio_nome_tax_categoria]);
 	if (false !== $tax) {
 		$terms = $terms_repo->fetch([], $tax);
 		return $terms;

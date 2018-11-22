@@ -14,11 +14,13 @@ Class MuseuDoIndioMods {
 	
 	function init() {
 		
+		global $mindio_nome_colecao;
+		
 		$this->tax_repo = \Tainacan\Repositories\Taxonomies::get_instance();
 		$this->col_repo = \Tainacan\Repositories\Collections::get_instance();
 		$this->filters_repo = \Tainacan\Repositories\Filters::get_instance();
 		
-		$this->main_collection = $this->col_repo->fetch_one(['name' => 'Museu do Índio']);
+		$this->main_collection = $this->col_repo->fetch_one(['name' => $mindio_nome_colecao]);
 		
 	}
 	
@@ -86,9 +88,11 @@ Class MuseuDoIndioMods {
 	}
 	
 	function get_nomes_povos_home() {
+		global $mindio_nome_tax_povos;
+		
 		$meta_repo = \Tainacan\Repositories\Metadata::get_instance();
 		
-		$metas = $meta_repo->fetch_by_collection( $this->main_collection, ['name' => 'Nome Principal do povo'], 'OBJECT' );
+		$metas = $meta_repo->fetch_by_collection( $this->main_collection, ['name' => $mindio_nome_tax_povos], 'OBJECT' );
 		//var_dump($metas);
 		if (is_array($metas) && sizeof($metas) > 0) {
 			$meta = $metas[0];
