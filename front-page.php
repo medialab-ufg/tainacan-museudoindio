@@ -25,7 +25,7 @@
     </div>
 	<?php $categorias = tainacan_mi_get_home_categories(); ?>
     <div class="front-page-body">
-        <div class="row">
+        <div class="row justify-content-center">
             <?php foreach ($categorias as $cat):  ?>
                 <?php $image_id = $cat->get_header_image_id(); ?>
 				<div class="col p-0 mt-5">
