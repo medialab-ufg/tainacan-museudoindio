@@ -82,7 +82,9 @@ function tainacan_mi_get_nomes_povos() {
 	
 }
 
-
+add_filter('tainacan-get-term-description', function($description, $term) {
+	return nl2br($description);
+}, 10, 2);
 
 
 // check tainacan 
