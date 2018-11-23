@@ -1,5 +1,5 @@
 <?php
-
+//Teste commit
 // Variáveis globais do Tema 
 // Sobreescreva elas no seu ambiente de desenvolvimento
 // copiando o dev-vars-sample.php e salvando como dev-vars.php
