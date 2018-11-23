@@ -7,7 +7,7 @@
 global $mindio_nome_colecao, $mindio_nome_tax_categoria, $mindio_nome_tax_povos;
 $mindio_nome_colecao = 'Museu do Índio';
 $mindio_nome_tax_categoria = 'Categoria';
-$mindio_nome_tax_povos = 'Nome Principal do povo';
+$mindio_nome_tax_povos = 'Povo';
 
 if (file_exists(get_stylesheet_directory() . '/dev-vars.php')) {
 	require_once('dev-vars.php');
