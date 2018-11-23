@@ -9,9 +9,9 @@
         <h1>Acervo Museológico</h1>
         <!-- <p>Subtítulo, se necessário for.</p> -->
         <hr class="mi-hr title"/>
-		<p class="text-justify">
-			<?php the_post(); the_content(); ?>
-		</p>
+		<div class="text-justify">
+            <?php the_post(); the_content(); ?>
+        </div>
     </div>
 	
 </section>
