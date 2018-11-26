@@ -20,7 +20,10 @@ require_once ('tainacan-mods.php');
 
 // Estilos
 function museuindio_enqueue_styles() {
-    $parent_style = 'tainacan-interface';
+    
+	global $MuseuDoIndioMods;
+
+	$parent_style = 'tainacan-interface';
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'tainacan-museudoindio',
     get_stylesheet_directory_uri() . '/style.css',
@@ -33,6 +36,9 @@ function museuindio_enqueue_styles() {
 	));
     wp_enqueue_style( 'style-museudoindio', get_stylesheet_directory_uri() . '/assets/scss/museudoindio.css' );
     wp_enqueue_script( 'script-museudoindio', get_stylesheet_directory_uri() . '/assets/js/scripts.js', '', '', true );
+	wp_localize_script('script-museudoindio', 'museudoindio', [
+		'search_target_url' =>  get_permalink( $MuseuDoIndioMods->main_collection->get_id() ) . '/#/'
+	]);
 }
 add_action( 'wp_enqueue_scripts', 'museuindio_enqueue_styles', 99 );
 
