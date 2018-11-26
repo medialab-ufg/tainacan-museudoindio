@@ -38,7 +38,7 @@ jQuery(document).ready(function ($) {
 		var classP = $("span[id*='more']")[0].parentElement.parentElement;
 		classP.classList.add('readmoreText');
 		var classC = $("span[id*='more']");
-		var elementHeight = classC[0].offsetTop - classP.clientHeight;
+		var elementHeight = classC[0].offsetTop - classP.offsetTop;
 
 		$('.readmoreText').readmore({
 			collapsedHeight: elementHeight + 5
