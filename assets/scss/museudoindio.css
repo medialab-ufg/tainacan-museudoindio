@@ -24,6 +24,8 @@ hr.mi-hr {
     font-weight: 400;
     margin-bottom: 0;
     white-space: pre-wrap; }
+.page-header > div .t-bg-collection {
+  background-color: #AD3D30; }
 @media only screen and (max-width: 576px) {
   .page-header.page-height {
     height: 300px; } }
@@ -33,11 +35,11 @@ hr.mi-hr {
   font-weight: 600; }
 .front-page .front-page-header p {
   color: #808081;
-  font-size: 18px;
   text-align: justify;
-  text-justify: inter-word; }
-.front-page .front-page-header p.italic {
-  font-style: italic; }
+  text-justify: inter-word;
+  font-size: 18px; }
+  .front-page .front-page-header p.italic {
+    font-style: italic; }
 .front-page .front-page-body .col {
   max-width: 320px;
   margin-right: 2.5rem; }

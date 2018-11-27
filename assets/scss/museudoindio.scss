@@ -39,6 +39,11 @@ hr.mi-hr {
             }
         }
     }
+    > div {
+        .t-bg-collection {
+            background-color: #AD3D30;
+        }
+    }
     @media only screen and (max-width: 576px) {
         &.page-height {
             height: 300px;
@@ -54,13 +59,17 @@ hr.mi-hr {
         }
         p {
             color: #808081;
+            text: {
+                align: justify;
+                justify: inter-word;
+            }
             font: {
                 size: 18px;
-                text-align: justify;
-				text-justify: inter-word;
-				.italic {
-					style: italic;
-				}
+            }
+            &.italic {
+                font: {
+                    style: italic;
+                }
             }
         }
     }
