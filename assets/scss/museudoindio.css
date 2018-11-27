@@ -24,7 +24,7 @@ hr.mi-hr {
     font-weight: 400;
     margin-bottom: 0;
     white-space: pre-wrap; }
-.page-header > div .t-bg-collection {
+.page-header > div.t-bg-collection {
   background-color: #AD3D30; }
 @media only screen and (max-width: 576px) {
   .page-header.page-height {
