@@ -25,9 +25,18 @@ hr.mi-hr {
     }
 }
 .page-header {
+    @media only screen and (max-width: 576px) {
+        &.page-height>div {
+            margin-bottom: 0.05rem !important;
+        }
+    }
     .ph-title-description {
         .singular-title {
             max-height: 400px;
+            @media only screen and (max-width: 576px) {
+                display: block;
+                max-width: 100%;
+            }
             p {
                 color: #000;
                 font: {
@@ -208,18 +217,18 @@ hr.mi-hr {
         &:focus { outline: none; }
     }
     @media only screen and (max-width: 576px){
-        height: 30px;
+        height: 40px;
         right: 20px;
-        width: 30px;
+        width: 40px;
         button[type=submit] {
-            width: 30px;
-            height: 30px;
-            font-size: 19px;
-            line-height: 30px;
+            width: 40px;
+            height: 40px;
+            font-size: 26px;
+            line-height: 40px;
         }
         input[type=text] {
-            height: 30px;
-            line-height: 30px;
+            height: 40px;
+            line-height: 40px;
         }
     }
 }
@@ -254,13 +263,13 @@ hr.mi-hr {
         }
     }
     @media only screen and (max-width: 576px) {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         right: 20px;
         top: 100px;
         .btn {
             .mdi {
-                font-size: 19px;
+                font-size: 26px;
             }
         }
     }
