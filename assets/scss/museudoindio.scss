@@ -85,7 +85,9 @@ hr.mi-hr {
     .front-page-body {
         .col {
             max-width: 320px;
-            margin-right: 2.5rem;
+            @media only screen and (min-width: 768px) {
+                margin-right: 2.5rem;
+            }
         }
         .figure {
             .figure-caption {

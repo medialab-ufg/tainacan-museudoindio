@@ -48,8 +48,10 @@ hr.mi-hr {
   .front-page .front-page-header p.italic {
     font-style: italic; }
 .front-page .front-page-body .col {
-  max-width: 320px;
-  margin-right: 2.5rem; }
+  max-width: 320px; }
+  @media only screen and (min-width: 768px) {
+    .front-page .front-page-body .col {
+      margin-right: 2.5rem; } }
 .front-page .front-page-body .figure .figure-caption {
   color: #000;
   font-size: 18px;
