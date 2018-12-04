@@ -281,6 +281,14 @@ footer {
     &.tainacan-footer {
         background-color: #AD3D30;
     }
+    .tainacan-footer-info {
+        .tainacan-powered {
+            color: #fff;
+            a {
+                color: #fff;
+            }
+        }
+    }
 }
 
 .max-large {

@@ -207,6 +207,10 @@ hr.mi-hr {
 
 footer.tainacan-footer {
   background-color: #AD3D30; }
+footer .tainacan-footer-info .tainacan-powered {
+  color: #fff; }
+  footer .tainacan-footer-info .tainacan-powered a {
+    color: #fff; }
 
 @media only screen and (min-width: 2000px) {
   .max-large {
