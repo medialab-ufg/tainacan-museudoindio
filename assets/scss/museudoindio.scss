@@ -280,12 +280,24 @@ hr.mi-hr {
 footer {
     &.tainacan-footer {
         background-color: #AD3D30;
-    }
-    .tainacan-footer-info {
-        .tainacan-powered {
-            color: #fff;
-            a {
+        .tainacan-footer-info {
+            .tainacan-powered {
                 color: #fff;
+                a {
+                    color: #fff;
+                }
+            }
+        }
+        .tainacan-mindio-footer--barra-logos {
+            padding-bottom: 50px !important;
+            margin-top: 50px;
+            @media only screen and (min-width: 576px) {
+                div:not(:last-child) {
+                    padding-right: 2rem;
+                }
+            }
+            img:not(.not-width) {
+                width: 80px;
             }
         }
     }

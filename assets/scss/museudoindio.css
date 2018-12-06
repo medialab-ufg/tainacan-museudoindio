@@ -207,10 +207,18 @@ hr.mi-hr {
 
 footer.tainacan-footer {
   background-color: #AD3D30; }
-footer .tainacan-footer-info .tainacan-powered {
-  color: #fff; }
-  footer .tainacan-footer-info .tainacan-powered a {
+  footer.tainacan-footer .tainacan-footer-info .tainacan-powered {
     color: #fff; }
+    footer.tainacan-footer .tainacan-footer-info .tainacan-powered a {
+      color: #fff; }
+  footer.tainacan-footer .tainacan-mindio-footer--barra-logos {
+    padding-bottom: 50px !important;
+    margin-top: 50px; }
+    @media only screen and (min-width: 576px) {
+      footer.tainacan-footer .tainacan-mindio-footer--barra-logos div:not(:last-child) {
+        padding-right: 2rem; } }
+    footer.tainacan-footer .tainacan-mindio-footer--barra-logos img:not(.not-width) {
+      width: 80px; }
 
 @media only screen and (min-width: 2000px) {
   .max-large {
