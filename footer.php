@@ -8,8 +8,8 @@
 					</ul>
 				</div>
 			</div>
+			<hr class="bg-scooter"/>
 		<?php } ?>
-		<hr class="bg-scooter"/>
 		<div class="row p-4 tainacan-footer-info">
 			<div class="col text-white font-weight-normal">
 				<p class="tainacan-footer-info--blog">

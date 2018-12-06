@@ -219,6 +219,8 @@ footer.tainacan-footer {
         padding-right: 2rem; } }
     footer.tainacan-footer .tainacan-mindio-footer--barra-logos img:not(.not-width) {
       width: 80px; }
+  footer.tainacan-footer hr.bg-scooter {
+    background-color: #fff !important; }
 
 @media only screen and (min-width: 2000px) {
   .max-large {
