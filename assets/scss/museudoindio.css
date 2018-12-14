@@ -207,20 +207,51 @@ hr.mi-hr {
 
 footer.tainacan-footer {
   background-color: #AD3D30; }
-  footer.tainacan-footer .tainacan-footer-info .tainacan-powered {
-    color: #fff; }
-    footer.tainacan-footer .tainacan-footer-info .tainacan-powered a {
+  footer.tainacan-footer .tainacan-footer-info {
+    padding-bottom: 1.875rem !important; }
+    footer.tainacan-footer .tainacan-footer-info .tainacan-powered {
       color: #fff; }
+      footer.tainacan-footer .tainacan-footer-info .tainacan-powered a {
+        color: #fff; }
   footer.tainacan-footer .tainacan-mindio-footer--barra-logos {
-    padding-bottom: 50px !important;
-    margin-top: 50px; }
+    margin-top: 30px; }
     @media only screen and (min-width: 576px) {
       footer.tainacan-footer .tainacan-mindio-footer--barra-logos div:not(:last-child) {
         padding-right: 2rem; } }
-    footer.tainacan-footer .tainacan-mindio-footer--barra-logos img:not(.not-width) {
-      width: 80px; }
+    @media only screen and (max-width: 745px) {
+      footer.tainacan-footer .tainacan-mindio-footer--barra-logos div:not(:last-child) {
+        margin-bottom: 2rem; } }
+    footer.tainacan-footer .tainacan-mindio-footer--barra-logos .logo-tainacan {
+      width: 118px;
+      height: 62px; }
+    footer.tainacan-footer .tainacan-mindio-footer--barra-logos .logo-sami {
+      width: 102px;
+      height: 72px; }
+    footer.tainacan-footer .tainacan-mindio-footer--barra-logos .logo-mindio {
+      width: 70px;
+      height: 70px; }
+      @media only screen and (max-width: 360px) {
+        footer.tainacan-footer .tainacan-mindio-footer--barra-logos .logo-mindio {
+          width: 77px; } }
+    footer.tainacan-footer .tainacan-mindio-footer--barra-logos .logo-funai {
+      width: 58px;
+      height: 91px; }
+    footer.tainacan-footer .tainacan-mindio-footer--barra-logos .logo-unesco {
+      width: 90px;
+      height: 69px; }
+    footer.tainacan-footer .tainacan-mindio-footer--barra-logos .logo-govfederal {
+      width: 180px;
+      height: 71px; }
   footer.tainacan-footer hr.bg-scooter {
     background-color: #fff !important; }
+  footer.tainacan-footer .tainacan-powered {
+    margin-bottom: 1.9375rem !important;
+    font-size: 14px; }
+    footer.tainacan-footer .tainacan-powered a {
+      color: #fff; }
+      footer.tainacan-footer .tainacan-powered a:hover {
+        color: #fff;
+        text-decoration: none; }
 
 @media only screen and (min-width: 2000px) {
   .max-large {
