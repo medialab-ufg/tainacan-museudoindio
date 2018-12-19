@@ -32,11 +32,11 @@ if ( get_option( 'tainacan_blogphone' ) ) {
 		</div>
         <hr class="bg-scooter"/>
         <div class="row p-4 tainacan-mindio-footer--barra-logos text-white justify-content-around justify-content-sm-around align-items-center">
+            <div><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/Unesco.svg" alt="" class="logo-unesco"></div>
 			<div><img src="<?php echo get_template_directory_uri() ?>/assets/images/logo-footer.svg" alt="" class="logo-tainacan"></div>
 			<div><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/SAMI.svg" alt="" class="logo-sami"></div>
 			<div><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/Museu_do_Indio.svg" alt="" class="logo-mindio"></div>
             <div><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/Funai.svg" alt="" class="logo-funai"></div>
-            <div><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/Unesco.svg" alt="" class="logo-unesco"></div>
 			<div><img src="<?php echo get_stylesheet_directory_uri();?>/assets/images/nome-governo-federal.png" alt="" class="logo-govfederal"></div>
         </div>
 		<div class="row">
