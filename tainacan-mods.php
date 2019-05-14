@@ -20,7 +20,14 @@ Class MuseuDoIndioMods {
 		$this->col_repo = \Tainacan\Repositories\Collections::get_instance();
 		$this->filters_repo = \Tainacan\Repositories\Filters::get_instance();
 		
-		$this->main_collection = $this->col_repo->fetch_one(['name' => $mindio_nome_colecao]);
+		$collection_id = get_theme_option('colecao_home');
+		if (is_front_page() && ! $collection_id) {
+			echo 'Acesse o painel e configure as opções da página inicial do Museu do Indio';
+			wp_die();
+		}
+		
+		if (is_numeric($collection_id))
+			$this->main_collection = $this->col_repo->fetch( (int) $collection_id );
 		
 	}
 	
@@ -90,12 +97,16 @@ Class MuseuDoIndioMods {
 	function get_nomes_povos_home() {
 		global $mindio_nome_tax_povos;
 		
+		$meta_id = get_theme_option('meta_povos');
+		
+		if (!is_numeric($meta_id))
+			return;
+		
 		$meta_repo = \Tainacan\Repositories\Metadata::get_instance();
 		
-		$metas = $meta_repo->fetch_by_collection( $this->main_collection, ['name' => $mindio_nome_tax_povos], 'OBJECT' );
+		$meta = $meta_repo->fetch( (int) $meta_id );
 		//var_dump($metas);
-		if (is_array($metas) && sizeof($metas) > 0) {
-			$meta = $metas[0];
+		if ($meta instanceof \Tainacan\Entities\Metadatum) {
 			
 			$args = [
 				'collection_id' => $this->main_collection->get_id(),

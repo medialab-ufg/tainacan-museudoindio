@@ -10,6 +10,4 @@ Você precisa, pra rodar esse tema:
 * uma coleção
 * 2 taxonomias aplicadas a essa coleção 
 
-Copie o arquivo dev-vars-sample.php e salve apenas como dev-vars.php
-
-Preencha os valores das variáveis com o nome da coleção e das taxonomias presentes no seu ambiente local.
+Acesse a página Museu do Indio no painel para selecionar qual é a coleção principal e os metadados que são mostrados na Home
