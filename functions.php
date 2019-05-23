@@ -34,7 +34,8 @@ function museuindio_enqueue_styles() {
 		'moreLink' => '<a href="#">' . __( 'Show more', 'tainacan-interface' ) . '</a>',
 		'lessLink' => '<a href="#">' . __( 'Show less', 'tainacan-interface' ) . '</a>',
 	));
-    wp_enqueue_style( 'style-museudoindio', get_stylesheet_directory_uri() . '/assets/scss/museudoindio.css' );
+	wp_enqueue_style( 'style-museudoindio', get_stylesheet_directory_uri() . '/assets/scss/museudoindio.css' );
+	wp_enqueue_style('material-design-icons-cdn-style', 'https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css', null, microtime());
     wp_enqueue_script( 'script-museudoindio', get_stylesheet_directory_uri() . '/assets/js/scripts.js', '', '', true );
 	wp_localize_script('script-museudoindio', 'museudoindio', [
 		'search_target_url' =>  get_permalink( $MuseuDoIndioMods->main_collection->get_id() ) . '/#/'
