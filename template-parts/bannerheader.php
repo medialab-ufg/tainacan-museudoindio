@@ -11,7 +11,7 @@
         <fieldset>
             <legend>Formulário de busca</legend>
 
-            <input type="text" id="search-box__search" name="search">
+            <input type="text" id="search-box__search" name="search" placeholder="Busca no acervo">
             <button type="submit"><i class="mdi mdi-magnify"></i></button>
         </fieldset>
     </form>

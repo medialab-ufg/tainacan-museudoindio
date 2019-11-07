@@ -201,7 +201,7 @@ hr.mi-hr {
     input[type=text] {
         width: 300px;
         height: 53px;
-        padding: 0 20px;
+        padding: 0rem 52px;
         line-height: 53px;
         position: absolute;
         top: 0;
@@ -262,6 +262,7 @@ hr.mi-hr {
     transform: translateX(0) translateY(0);
     .btn {
         background-color: rgba(255,255,255,.8);
+        padding: .25rem;
         .mdi {
             height: 41px;
             font-size: 34px;
