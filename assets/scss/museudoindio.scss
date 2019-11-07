@@ -3,6 +3,7 @@ hr.mi-hr {
     border-width: 8px;
     width: 300px;
     margin-left: 0;
+    margin-bottom: 0.5rem;
     &.title {
         border-width: 4px;
         width: 200px;
@@ -10,6 +11,18 @@ hr.mi-hr {
     @media only screen and (max-width: 576px) {
         width: 280px;
     }
+    &.title {
+        margin-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+.navbar > .container-fluid {
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 #menubannerbefore {
     ul {
