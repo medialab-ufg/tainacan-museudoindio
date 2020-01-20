@@ -19,7 +19,7 @@
 <section class="front-page margin-two-column mt-5">	
 	
 	<div class="front-page-header margin-one-column">
-        <h1>Coleções em destaque</h1>
+        <h1>Categorias em destaque</h1>
         <!-- <p>Subtítulo, se necessário for.</p> -->
         <hr class="mi-hr title"/>
     </div>
